@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Gestión de Riesgo y Tamaño de Posición | Trading-Latam</title>
+<meta name="description" content="Calculadora gratuita de gestión de riesgo: tamaño de posición, monto en riesgo y ratio riesgo/beneficio para trading de forex, acciones y cripto. Por Trading-Latam.">
+<link rel="canonical" href="https://gerencia154.github.io/">
+<style>
+  :root{--ink:#111;--orange:#E8670A;--paper:#f5f5f5;--border:#e3e3e3;--green:#10b981;--red:#ef4444;--muted:#6b7280}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+  header{border-bottom:1px solid var(--border);padding:18px 0}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{font-weight:800;font-size:18px;letter-spacing:-.02em}
+  .brand b{color:var(--orange)}
+  .brand a{color:inherit;text-decoration:none}
+  .cta{background:var(--orange);color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:9px 14px;border-radius:9px}
+  h1{font-size:28px;letter-spacing:-.02em;margin:28px 0 6px}
+  .lead{color:var(--muted);margin-bottom:24px}
+  .card{border:1px solid var(--border);border-radius:16px;padding:22px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+  input,select{width:100%;padding:11px 12px;border:1px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit}
+  input:focus,select:focus{outline:2px solid var(--orange);border-color:var(--orange)}
+  .full{grid-column:1/-1}
+  .out{margin-top:22px;border-top:1px dashed var(--border);padding-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .stat{background:var(--paper);border-radius:12px;padding:14px 16px}
+  .stat .k{font-size:12px;color:var(--muted);font-weight:600}
+  .stat .v{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-top:2px}
+  .v.pos{color:var(--green)}.v.neg{color:var(--red)}
+  .note{font-size:13px;color:var(--muted);margin-top:16px}
+  .disc{font-size:12px;color:var(--muted);background:var(--paper);border-radius:10px;padding:12px 14px;margin-top:18px}
+  footer{border-top:1px solid var(--border);margin-top:40px;padding:24px 0;font-size:13px;color:var(--muted)}
+  footer a{color:var(--orange);font-weight:600;text-decoration:none}
+  @media(max-width:560px){.grid,.out{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand"><a href="https://trading-latam.com" target="_blank" rel="noopener"><b>Trading</b>-Latam</a></div>
+  <a class="cta" href="https://trading-latam.com" target="_blank" rel="noopener">Ir a Trading-Latam &rarr;</a>
+</div></header>
+
+<main class="wrap">
+  <h1>Calculadora de Gestión de Riesgo y Tamaño de Posición</h1>
+  <p class="lead">Herramienta gratuita y open-source de <a href="https://trading-latam.com" target="_blank" rel="noopener" style="color:var(--orange);font-weight:600">Trading-Latam</a> para calcular cuánto arriesgar por operación y el tamaño exacto de tu posición. Sin registros, sin dependencias externas.</p>
+
+  <div class="card">
+    <div class="grid">
+      <div><label>Capital de la cuenta (USD)</label><input id="equity" type="number" value="1000" min="0" step="any"></div>
+      <div><label>Riesgo por operación (%)</label><input id="risk" type="number" value="1" min="0" max="100" step="any"></div>
+      <div><label>Precio de entrada</label><input id="entry" type="number" value="100" min="0" step="any"></div>
+      <div><label>Stop Loss</label><input id="stop" type="number" value="98" min="0" step="any"></div>
+      <div class="full"><label>Valor por unidad (multiplicador del activo, opcional)</label><input id="mult" type="number" value="1" min="0" step="any"></div>
+    </div>
+
+    <div class="out" id="out"></div>
+    <p class="note">El cálculo asume que pierdes exactamente en el Stop Loss. Nunca arriesgues más del 1–2% de tu capital por operación.</p>
+    <div class="disc"><strong>Aviso:</strong> herramienta educativa. Trading-Latam no ofrece asesoría financiera personalizada. Operar conlleva riesgo de pérdida de capital.</div>
+  </div>
+
+  <p class="note" style="margin-top:24px">¿Quieres herramientas más avanzadas (Scanner, Terminal y Auditor de cuentas)? Visita <a href="https://trading-latam.com" target="_blank" rel="noopener" style="color:var(--orange);font-weight:600">trading-latam.com</a> y aprende <a href="https://trading-latam.com/como-empezar-en-trading/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:600">cómo hacer trading desde cero</a>.</p>
+</main>
+
+<footer><div class="wrap">
+  Hecho por <a href="https://trading-latam.com" target="_blank" rel="noopener">Trading-Latam</a> — el hub financiero y tecnológico de Latinoamérica. ·
+  <a href="https://trading-latam.com/eleccion-de-broker/" target="_blank" rel="noopener">Elección de broker</a> ·
+  <a href="https://trading-latam.com/educacion-financiera/" target="_blank" rel="noopener">Cursos</a>
+</div></footer>
+
+<script>
+(function(){
+  var ids=['equity','risk','entry','stop','mult'];
+  var els={};ids.forEach(function(i){els[i]=document.getElementById(i);els[i].addEventListener('input',calc);});
+  function fmt(n,d){return isFinite(n)?n.toLocaleString('es',{maximumFractionDigits:d==null?2:d}):'—';}
+  function calc(){
+    var eq=+els.equity.value, rp=+els.risk.value, en=+els.entry.value, sl=+els.stop.value, m=+els.mult.value||1;
+    var riskAmt=eq*rp/100;
+    var dist=Math.abs(en-sl);
+    var perUnit=dist*m;
+    var units=perUnit>0?riskAmt/perUnit:0;
+    var dir=sl<en?'LARGO (compra)':sl>en?'CORTO (venta)':'—';
+    var rr2=en+ (en-sl)*2; // TP a 1:2
+    document.getElementById('out').innerHTML=
+      stat('Monto en riesgo', '$'+fmt(riskAmt), 'neg')+
+      stat('Distancia al Stop', fmt(dist,4)+' pts', '')+
+      stat('Tamaño de posición', fmt(units,2)+' u.', 'pos')+
+      stat('Dirección', dir, '')+
+      stat('TP sugerido (1:2)', fmt(rr2,4), 'pos')+
+      stat('Pérdida máx. (%)', fmt(rp,2)+'%', 'neg');
+  }
+  function stat(k,v,c){return '<div class="stat"><div class="k">'+k+'</div><div class="v '+c+'">'+v+'</div></div>';}
+  calc();
+})();
+</script>
+</body>
+</html>
