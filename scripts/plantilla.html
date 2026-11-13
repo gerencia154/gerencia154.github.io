@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ranking de traders verificados de Latinoamérica | Trading Latam</title>
+<meta name="description" content="Ranking diario de traders de Latinoamérica con cuentas reales auditadas en modo de solo lectura (MT5 e Interactive Brokers), ordenados por TL-Score. Y el Scanner de Trading Latam.">
+<link rel="canonical" href="https://gerencia154.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{{LD}}</script>
+<style>
+:root{--ink:oklch(0.21 0.005 60);--text:oklch(0.45 0.008 80);--line:oklch(0.89 0.008 95);--soft:oklch(0.97 0.005 95);--bg:oklch(0.995 0.002 95);--card:oklch(0.998 0.001 95);--orange:#E65F0B;--orange-dark:#B94100}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 32px);margin:0 auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.logo{font-weight:800;letter-spacing:-.02em;text-decoration:none;font-size:18px}.logo span{color:var(--orange)}
+header nav{display:flex;gap:24px;font-size:14px;font-weight:500}header nav a{text-decoration:none;padding:8px 0}header nav a:hover{color:var(--orange-dark)}
+.intro{padding:64px 0 40px;max-width:760px}
+.k{font-size:14px;font-weight:600;color:var(--orange-dark);margin:0 0 14px}
+h1{font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-.03em;margin:0;font-weight:800}
+.lead{font-size:18px;color:var(--text);margin:22px 0 0;max-width:62ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;transition:background-color .2s cubic-bezier(.25,1,.5,1),border-color .2s cubic-bezier(.25,1,.5,1)}
+.btn.p{background:var(--orange);color:var(--card)}.btn.p:hover{background:var(--orange-dark)}
+.btn.s{border:1px solid var(--line);background:var(--card)}.btn.s:hover{border-color:var(--ink)}
+.board{padding:16px 0 56px}
+.board-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:16px}
+h2{font-size:26px;letter-spacing:-.02em;margin:0;line-height:1.2}
+.meta{font-size:14px;color:var(--text)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:640px}
+th{font-size:12px;font-weight:600;color:var(--text);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--soft)}
+td{padding:13px 16px;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}
+td a{font-weight:600;text-decoration:none}td a:hover{color:var(--orange-dark);text-decoration:underline}
+.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}th.n{text-align:right}
+.rt{display:inline-block;min-width:22px;padding:1px 6px;margin-left:4px;border-radius:5px;background:var(--soft);font-size:12px;font-weight:700;text-align:center}
+.note{font-size:13px;color:var(--text);margin-top:12px}
+.split{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;padding:56px 0;border-top:1px solid var(--line)}
+.split h2{margin-bottom:14px}.split p{color:var(--text);margin:0 0 12px}
+.split ol{margin:0;padding-left:20px;color:var(--text)}.split li{margin:8px 0}
+.opn{margin-top:16px!important}
+.scanner{background:var(--ink);color:var(--card);border-radius:12px;padding:32px}
+.scanner p{color:oklch(0.86 0.005 95)}.scanner h2{color:var(--card)}
+.scanner .btn.p{margin-top:12px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:13px;color:var(--text);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{text-decoration:none;font-weight:500}footer a:hover{color:var(--orange-dark)}
+@media(max-width:760px){.intro{padding:40px 0 28px}header nav{gap:16px;font-size:13px}.split{grid-template-columns:1fr;gap:32px;padding:40px 0}.scanner{padding:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="https://trading-latam.com/">Trading <span>Latam</span></a>
+  <nav aria-label="Principal"><a href="https://trading-latam.com/ranking-toptraders/">Ranking</a><a href="https://trading-latam.com/scanner/">Scanner</a><a href="https://github.com/gerencia154/ranking-traders-latam">Datos abiertos</a></nav>
+</header>
+<main>
+<section class="intro">
+  <p class="k">Actualizado {{FECHA}}</p>
+  <h1>Ranking de traders verificados de Latinoamérica</h1>
+  <p class="lead">Cuentas reales de trading conectadas en modo de solo lectura, con MetaTrader 5 o Interactive Brokers. Trading Latam lee el historial directamente del bróker, lo cuadra con el balance real y ordena cada cuenta por su TL-Score.</p>
+  <div class="cta"><a class="btn p" href="https://trading-latam.com/ranking-toptraders/">Ver el ranking completo →</a><a class="btn s" href="https://trading-latam.com/scanner/">Abrir el Scanner</a></div>
+</section>
+<section class="board" aria-labelledby="top">
+  <div class="board-head"><h2 id="top">Top 15 de hoy</h2><span class="meta">{{TOTAL}} cuentas públicas verificadas</span></div>
+  <div class="tbl"><table>
+    <thead><tr><th class="n">#</th><th>Trader o estrategia</th><th>Bróker</th><th>Plataforma</th><th class="n">TL-Score</th><th class="n">Caída máx.</th><th class="n">Operaciones</th></tr></thead>
+    <tbody>
+{{FILAS}}
+    </tbody>
+  </table></div>
+  <p class="note">Cada nombre abre su reporte auditado en vivo. Los resultados pasados no garantizan resultados futuros; operar con apalancamiento implica riesgo de pérdida de capital.</p>
+</section>
+<section class="split">
+  <div>
+    <h2>Cómo se verifica una cuenta</h2>
+    <ol>
+      <li>El trader conecta su cuenta en modo de solo lectura: nadie puede abrir ni cerrar operaciones.</li>
+      <li>El sistema se sincroniza con el bróker cada 30 minutos aproximadamente.</li>
+      <li>Cada operación se cuadra con el balance real. Los bonos no cuentan como depósito ni como ganancia.</li>
+      <li>El TL-Score combina rentabilidad, riesgo, consistencia y actividad. <a href="https://trading-latam.com/metodologia-ranking-traders/">Ver la metodología</a>.</li>
+    </ol>
+    <p class="opn">Los datos son abiertos (CC BY 4.0) y se publican cada día en <a href="https://github.com/gerencia154/ranking-traders-latam">GitHub</a>.</p>
+  </div>
+  <aside class="scanner">
+    <h2>Scanner de Trading Latam</h2>
+    <p>Gráfico gratis con 8 temporalidades e indicadores, el mercado de hoy y oportunidades con entrada, stop y objetivo en acciones, ETF, forex, materias primas y cripto.</p>
+    <a class="btn p" href="https://trading-latam.com/scanner/">Abrir el Scanner →</a>
+  </aside>
+</section>
+</main>
+<footer>
+  <span>Trading Latam · comunidad de trading de Lima, Perú</span>
+  <span><a href="https://trading-latam.com/">trading-latam.com</a> · <a href="https://trading-latam.com/ranking-toptraders/">Ranking</a> · <a href="https://trading-latam.com/scanner/">Scanner</a></span>
+</footer>
+</div>
+</body>
+</html>
