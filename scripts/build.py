@@ -1,5 +1,6 @@
 """Genera index.html con el ranking público de Trading Latam (HTML estático, legible por buscadores e IAs)."""
 import json, html, urllib.request, pathlib
+from widget import render_widget
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 req = urllib.request.Request("https://trading-latam.com/ranking-toptraders/data.json",
@@ -42,4 +43,7 @@ out = (tpl.replace("{{FILAS}}", filas).replace("{{FECHA}}", e(fecha))
           .replace("{{TOTAL}}", str(len(rows)))
           .replace("{{LD}}", json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")))
 (ROOT / "index.html").write_text(out)
+widget_dir = ROOT / "widget"
+widget_dir.mkdir(exist_ok=True)
+(widget_dir / "index.html").write_text(render_widget(d), encoding="utf-8")
 print(fecha, len(rows))

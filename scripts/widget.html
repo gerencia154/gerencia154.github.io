@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Top 5 del Ranking | Trading Latam</title>
+<meta name="description" content="Top 5 del Ranking público de Trading Latam: estrategias, bróker, plataforma, TL-Score y caída máxima. Fecha y reportes de la fuente.">
+<link rel="canonical" href="https://gerencia154.github.io/widget/">
+<style>
+:root{--ink:oklch(0.21 0.005 60);--text:oklch(0.45 0.008 80);--line:oklch(0.89 0.008 95);--soft:oklch(0.97 0.005 95);--bg:oklch(0.995 0.002 95);--card:oklch(0.998 0.001 95);--orange:#E65F0B;--orange-dark:#B94100}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,sans-serif}a{color:inherit;text-underline-offset:3px}a:hover{color:var(--orange-dark)}a:focus-visible{outline:2px solid var(--orange-dark);outline-offset:3px;border-radius:2px}
+main{max-width:640px;margin:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}header{padding:20px 16px 16px;background:var(--soft);border-bottom:1px solid var(--line)}.brand{font-size:12px;font-weight:700;margin:0 0 4px}.brand span{color:var(--orange-dark)}h1{font-size:22px;line-height:1.2;letter-spacing:-.02em;margin:0}.date{color:var(--text);font-size:12px;margin:8px 0 0}.ranking{padding:0;margin:0;list-style:none}.entry{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;padding:12px 16px;border-bottom:1px solid var(--line)}.position{font-variant-numeric:tabular-nums;color:var(--text);font-size:12px;padding-top:2px}.identity{min-width:0;overflow-wrap:anywhere}.identity>a,.identity{font-weight:600}.identity p{font-size:12px;color:var(--text);font-weight:400;margin:4px 0 0}dl{grid-column:2;display:flex;flex-wrap:wrap;gap:8px 24px;margin:0;font-size:12px;font-variant-numeric:tabular-nums}dl div{display:flex;gap:8px;align-items:baseline}dt{color:var(--text)}dd{margin:0}strong{font-size:14px}footer{padding:16px;font-size:12px;color:var(--text)}footer p{margin:8px 0 0}.full{display:inline-block;min-height:32px;font-size:14px;font-weight:700;color:var(--orange-dark)}.empty{padding:24px 16px;margin:0;border-bottom:1px solid var(--line)}
+@media(min-width:480px){.entry{grid-template-columns:20px minmax(0,1fr) 144px;gap:12px}dl{grid-column:3;display:grid;gap:4px}dl div{justify-content:space-between}}
+</style>
+</head>
+<body>
+<main aria-labelledby="ranking-title">
+<header>
+<p class="brand">Trading <span>Latam</span></p>
+<h1 id="ranking-title">Top 5 del Ranking</h1>
+<p class="date">Fecha de la fuente: {{DATE}}</p>
+</header>
+{{ENTRIES}}
+<footer>
+<a class="full" href="{{RANKING_URL}}" target="_blank" rel="noopener noreferrer">Ver el Ranking completo →</a>
+<p>Fuente: <a href="{{RANKING_URL}}" target="_blank" rel="noopener noreferrer">Trading Latam</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p>
+<p>Resultados pasados no garantizan resultados futuros.</p>
+</footer>
+</main>
+</body>
+</html>
