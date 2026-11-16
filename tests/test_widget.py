@@ -57,6 +57,12 @@ class WidgetTests(unittest.TestCase):
         self.assertNotIn('href="//', out)
         self.assertNotIn("<img", out)
 
+    def test_malformed_report_url_keeps_alias_without_blocking_render(self):
+        out = self.render(dataset([strategy(1, report_url="https://[bad/report")]))
+        self.assertIn("Estrategia 1", out)
+        self.assertNotIn("https://[bad/report", out)
+        self.assertNotIn(">Estrategia 1</a>", out)
+
     def test_missing_metrics_remain_unavailable_while_real_zero_survives(self):
         out = self.render(dataset([strategy(1, tl_score=None, drawdown_max=None),
                                    strategy(2, tl_score=0, drawdown_max=0),

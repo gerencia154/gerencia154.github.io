@@ -13,9 +13,13 @@ def render_widget(data):
     for row in data.get("strategies", [])[:5]:
         alias = html.escape(str(row.get("strategy_alias") or "Estrategia sin alias"))
         url = str(row.get("report_url") or "")
-        parsed = urlsplit(url)
-        # Escaping alone does not make a javascript: link safe.
-        if parsed.scheme == "https" and parsed.hostname and not parsed.username and not parsed.password:
+        try:
+            parsed = urlsplit(url)
+            safe_url = parsed.scheme == "https" and parsed.hostname and not parsed.username and not parsed.password
+        except ValueError:
+            safe_url = False
+        # Invalid URLs leave the alias readable; escaping alone does not make a javascript: link safe.
+        if safe_url:
             alias = f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{alias}</a>'
         broker = html.escape(str(row.get("broker") or "Bróker no disponible"))
         platform = html.escape(str(row.get("platform") or "Plataforma no disponible"))
