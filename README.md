@@ -11,14 +11,14 @@ Copia este HTML en tu página cuando la ruta publicada esté disponible:
   src="https://gerencia154.github.io/widget/"
   title="Top 5 del Ranking de Trading Latam"
   width="100%"
-  height="720"
+  height="780"
   style="border:0; max-width:640px; display:block;"
   loading="lazy"
   referrerpolicy="no-referrer"
 ></iframe>
 ```
 
-La página del widget se adapta desde 320 px de ancho. La altura de 720 px permite el contenido habitual en móvil; aumenta el valor si tu diseño o los alias más largos lo requieren. El iframe mantiene su propio desplazamiento si el contenido supera la altura elegida. No necesita JavaScript, cookies, formularios ni acceso al contenido de tu página. Los reportes se abren en una pestaña nueva.
+La página del widget se adapta desde 320 px de ancho. La altura de 780 px permite el contenido habitual en móvil; aumenta el valor si tu diseño o los alias más largos lo requieren. El iframe mantiene su propio desplazamiento si el contenido supera la altura elegida. No necesita JavaScript, cookies, formularios ni acceso al contenido de tu página. Los reportes se abren en una pestaña nueva.
 
 El Top 5 conserva el orden de la fuente y muestra alias públicos, bróker, plataforma, TL-Score y caída máxima. Un guion indica una métrica no disponible; un cero publicado sigue siendo cero. La fecha visible es la fecha de la fuente, no la de visita. Si el proceso diario falla, permanece la última versión publicada con su fecha.
 
